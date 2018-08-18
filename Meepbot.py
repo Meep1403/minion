@@ -6,7 +6,6 @@ from discord.ext.commands import Bot
 
 import asyncio
 import itertools
-import requests
 import random
 import io
 
