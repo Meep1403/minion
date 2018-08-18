@@ -211,7 +211,10 @@ async def em(message: str=None):
                             "Manchester",
                             "https://imgur.com/a/gNn1lxk"])
         await bot.say(b)
-
+        
+@bot.command(pass_context=True)
+async def testing(ctx):
+    await bot.say("test")
 
 @bot.event
 async def on_message(message):
