@@ -54,7 +54,9 @@ async def snazz(message: str=None):
                             "https://giphy.com/gifs/thanks-thank-you-kazoo-kid-l3q2wJsC23ikJg9xe",
                             "You're wonderful :yellow_heart:",
                             "https://giphy.com/gifs/UCZ88v3wSZFHW",
-                            "https://giphy.com/gifs/love-art-cute-l4pTdcifPZLpDjL1e"])
+                            "https://giphy.com/gifs/love-art-cute-l4pTdcifPZLpDjL1e",
+                            "https://www.youtube.com/watch?v=XDwPk7lMOps",
+                            "https://www.youtube.com/watch?v=IPhPkxxxOKk"])
         await bot.say(p)
 
 @bot.command(pass_context=True)
@@ -92,6 +94,80 @@ async def help(ctx):
 
     await bot.send_message(author, embed=embed)
     await bot.say("A DM has been sent to you!")
+
+@bot.command(pass_context=True)
+async def msg(ctx, message: str=None):
+    author = ctx.message.author
+    if message is None:
+        c = random.choice(["Hello!",
+                           "What's up!",
+                           "How's your day? :3",
+                           "Just sliding into your DMs :sunglasses:",
+                           "Nice to meet you!",
+                           "I hope your day is wonderful!",
+                           "Thank you for inviting me to your DMs! I'm sure we'll have lots of fun together :3",
+                           "Can I tell you a secret? Martin is actually a terrible owner",
+                           "Whale hello there! Nice to sea you :D",
+                           "BEST FRIENDS FOREVER!",
+                           "Tell Martin he's a loser",
+                           "HAI!!!!!!!",
+                           "https://www.youtube.com/watch?v=ZaeCvdZtsgo",
+                           "https://www.youtube.com/watch?v=B7bqAsxee4I",
+                           "https://www.youtube.com/watch?v=fFnsqVEMIbs",
+                           "https://www.youtube.com/watch?v=EcXURC_nNhc",
+                           "A day without sunshine is like night",
+                           "Have you ever been running and accidentally ran into a parked car and fell down and said, 'I like cheesecake?' Me neither.",
+                           "Quick, what's the number for 911?!",
+                           "Just because I'm stupid doesn't mean I'm dumb"])
+    await bot.send_message(author, c)
+    await bot.say("CHECK YOUR DMs!!!!!!!")
+
+@bot.command(pass_text=True)
+async def pun(message: str=None):
+    if message is None:
+        t = random.choice(["What do you call a fake noodle? An Impasta.",
+                           "I would avoid the sushi if I was you. It’s a little fishy.",
+                           "Want to hear a joke about paper? Nevermind it’s tearable.",
+                           "Why did the cookie cry? Because his father was a wafer so long!",
+                           "I used to work in a shoe recycling shop. It was sole destroying.",
+                           "What do you call a belt with a watch on it? A waist of time.",
+                           "How do you organize an outer space party? You planet.",
+                           "I went to a seafood disco last week... and pulled a mussel.",
+                           "Do you know where you can get chicken broth in bulk? The stock market.",
+                           "I cut my finger chopping cheese, but I think that I may have greater problems.",
+                           "My cat was just sick on the carpet, I don’t think it’s feline well.",
+                           "Why did the octopus beat the shark in a fight? Because it was well armed.",
+                           "How much does a hipster weigh? An instagram.",
+                           "What did daddy spider say to baby spider? You spend too much time on the web.",
+                           "Atheism is a non-prophet organisation.",
+                           "There’s a new type of broom out, it’s sweeping the nation.",
+                           "What cheese can never be yours? Nacho cheese.",
+                           "What did the Buffalo say to his little boy when he dropped him off at school? Bison.",
+                           "Have you ever heard of a music group called Cellophane? They mostly wrap.",
+                           "Why does Superman gets invited to dinners? Because he is a Supperhero.",
+                           "How was Rome split in two? With a pair of Ceasars.",
+                           "The shovel was a ground breaking invention.",
+                           "A scarecrow says, 'This job isn't for everyone, but hay, it's in my jeans.'",
+                           "A Buddhist walks up to a hot dog stand and says, 'Make me one with everything.'",
+                           "Did you hear about the guy who lost the left side of his body? He's alright now.",
+                           "What do you call a girl with one leg that's shorter than the other? Ilene.",
+                           "I did a theatrical performance on puns. It was a play on words.",
+                           "What do you do with a dead chemist? You barium.",
+                           "I bet the person who created the door knocker won a Nobel prize.",
+                           "Towels can’t tell jokes. They have a dry sense of humor.",
+                           "Two birds are sitting on a perch and one says 'Do you smell fish?'",
+                           "Do you know sign language? You should learn it, it’s pretty handy.",
+                           "What do you call a beautiful pumpkin? GOURDgeous.",
+                           "Why did one banana spy on the other? Because she was appealing.",
+                           "What do you call a cow with no legs? Ground beef.",
+                           "What do you call a cow with two legs? Lean beef.",
+                           "What do you call a cow with all of its legs? High steaks.",
+                           "A cross eyed teacher couldn’t control his pupils.",
+                           "After the accident, the juggler didn’t have the balls to do it.",
+                           "I used to be afraid of hurdles, but I got over it.",
+                           "To write with a broken pencil is pointless."])
+        await bot.say(t)
+
 
 @bot.command(pass_context=True)
 async def invite(ctx):
@@ -209,12 +285,13 @@ async def em(message: str=None):
         b = random.choice(["https://giphy.com/gifs/minecraft-BljlTfIli47x6",
                             "EM, YOU'RE SO FREAKING NICE AND I'M SO HAPPY YOU'RE MY FRIEND!",
                             "Manchester",
-                            "https://imgur.com/a/gNn1lxk"])
+                            "https://imgur.com/a/gNn1lxk",
+                            "https://giphy.com/gifs/ladylamb-mom-pop-music-bayonne-l0HFi4SqqafGmMyFG",
+                            "Em-in-Em",
+                            "https://www.youtube.com/watch?v=_Yhyp-_hX2s",
+                            ""])
         await bot.say(b)
-        
-@bot.command(pass_context=True)
-async def testing(ctx):
-    await bot.say("test WOOOOOOOOOO")
+
 
 @bot.event
 async def on_message(message):
