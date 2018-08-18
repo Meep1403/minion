@@ -214,7 +214,7 @@ async def em(message: str=None):
         
 @bot.command(pass_context=True)
 async def testing(ctx):
-    await bot.say("test")
+    await bot.say("test WOOOOOOOOOO")
 
 @bot.event
 async def on_message(message):
